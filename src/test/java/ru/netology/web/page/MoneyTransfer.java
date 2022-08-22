@@ -2,7 +2,6 @@ package ru.netology.web.page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import ru.netology.web.data.DataHelper;
 
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
@@ -20,12 +19,13 @@ public class MoneyTransfer {
         heading.shouldBe(Condition.visible);
     }
 
-    public DashboardPage transferForm(String sum, DataHelper.CardNumber cardNumber) {
+    public DashboardPage transferForm(String sum, String cardNumber) {
         amount.setValue(sum);
         from.setValue(String.valueOf(cardNumber));
         button.click();
         return new DashboardPage();
     }
+
 
     public void getError() {
         error.shouldBe(Condition.visible);

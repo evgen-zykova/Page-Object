@@ -36,7 +36,7 @@ public class DataHelper {
         private String cardNumber;
     }
 
-    public static String getFirstCardNumber() {
+    public static String getFirstCardNumber1() {
         return new String("5559 0000 0000 0001");
     }
 
